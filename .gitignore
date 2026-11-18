@@ -24,3 +24,7 @@ Thumbs.db
 
 # Adapter weights and tokenizer copies are regenerable and large
 outputs/trainer/**/final/
+
+# Chinese working translation — not part of the submitted set
+docs/report_zh.md
+docs/CP5403_报告_中文版.docx

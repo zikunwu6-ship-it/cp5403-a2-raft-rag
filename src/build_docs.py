@@ -322,19 +322,22 @@ def main():
            placeholders=ph)
     references_hanging_indent(DOCS / "CP5403_Report_EN.docx")
 
-    render(DOCS / "report_zh.md", DOCS / "CP5403_报告_中文版.docx",
-           meta={
-               "title": "面向成人远程学习者的可溯源学习支持",
-               "subtitle": "将检索增强微调（RAFT）适配到课程语料",
-               "fields": {
-                   "课程": "CP5403 — 大语言模型",
-                   "考核": "考核二 — LLM 项目（30%）",
-                   "学生": f"{STUDENT} · {STUDENT_ID}",
-                   "日期": "2026 年 11 月",
-                   "仓库": GITHUB,
+    # The Chinese version is a working translation kept outside the submitted
+    # repository, so the build must not fail when it is absent from a clone.
+    if (DOCS / "report_zh.md").exists():
+        render(DOCS / "report_zh.md", DOCS / "CP5403_报告_中文版.docx",
+               meta={
+                   "title": "面向成人远程学习者的可溯源学习支持",
+                   "subtitle": "将检索增强微调（RAFT）适配到课程语料",
+                   "fields": {
+                       "课程": "CP5403 — 大语言模型",
+                       "考核": "考核二 — LLM 项目（30%）",
+                       "学生": f"{STUDENT} · {STUDENT_ID}",
+                       "日期": "2026 年 11 月",
+                       "仓库": GITHUB,
+                   },
                },
-           },
-           placeholders=ph_zh)
+               placeholders=ph_zh)
 
     render(DOCS / "ai_use_report.md", DOCS / "AI_use_report.docx",
            meta={"title": "CP5403 — Assessment 2: AI use reporting",
