@@ -125,4 +125,5 @@ Peak training memory ≈ 7 GB at batch 2 × grad-accum 8.
 ## AI use
 
 Generative AI was used in this project. See `docs/AI_use_report.docx` and
-`docs/prompt_history.docx` for the declaration and the full prompt log.
+`docs/Prompt_history.docx` for the declaration and the full prompt log, and
+`docs/CP5403_Report_EN.docx` for the report itself.
