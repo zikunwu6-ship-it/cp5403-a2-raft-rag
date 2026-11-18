@@ -1,0 +1,18 @@
+{
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "data_tag": "gold_only",
+  "run_name": "sft_gold",
+  "answer_only": false,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "epochs": 1.0,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "effective_batch": 16,
+  "max_len": 1152,
+  "n_train": 3000,
+  "train_loss_final": 0.07303251624107361,
+  "peak_vram_gb": 4.94,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

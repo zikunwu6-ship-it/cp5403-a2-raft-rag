@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Generated data (regenerable from src/build_*.py)
+data/raw/
+data/processed/
+data/index/
+
+# Model artefacts are large; keep logs and metadata, not weights
+outputs/trainer/**/checkpoint-*/
+outputs/trainer/**/*.safetensors
+
+# Logs
+outputs/*.log
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Word lock files
+~$*
+
+# Adapter weights and tokenizer copies are regenerable and large
+outputs/trainer/**/final/
