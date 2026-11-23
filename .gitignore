@@ -1,11 +1,40 @@
-# This repository carries the submitted documents only. Source, results,
-# figures and build output are working material and stay local, so the list is
-# a whitelist: everything is ignored unless named here.
+.venv/
+__pycache__/
+*.pyc
 
-*
-!/.gitignore
-!/docs/
-!/docs/CP5403_Report_EN.docx
-!/docs/AI_use_report.docx
-!/docs/AI_use_reporting_template_filled.docx
-!/docs/Prompt_history.docx
+# Generated data (regenerable from src/build_*.py)
+data/raw/
+data/processed/
+data/index/
+
+# Model artefacts are large; keep logs and metadata, not weights
+outputs/trainer/**/checkpoint-*/
+outputs/trainer/**/*.safetensors
+
+# Logs
+outputs/*.log
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Word lock files
+~$*
+
+# Adapter weights and tokenizer copies are regenerable and large
+outputs/trainer/**/final/
+
+# Chinese working translation — not part of the submitted set
+docs/report_zh.md
+docs/CP5403_报告_中文版.docx
+
+# Speech script — kept locally, not part of the submitted set
+docs/speech_script*.md
+docs/CP5403_Speech_Script*.docx
+
+# Slide deck — built from docs/ppt_outline.md, kept out of the repo
+docs/CP5403_Presentation*.pptx
+
+# Scratch files from document builds and visual checks
+docs/_*
