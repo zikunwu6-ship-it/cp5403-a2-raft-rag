@@ -33,5 +33,8 @@ docs/CP5403_报告_中文版.docx
 docs/speech_script*.md
 docs/CP5403_Speech_Script*.docx
 
+# Slide deck — built from docs/ppt_outline.md, kept out of the repo
+docs/CP5403_Presentation*.pptx
+
 # Scratch files from document builds and visual checks
 docs/_*
