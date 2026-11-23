@@ -28,3 +28,12 @@ outputs/trainer/**/final/
 # Chinese working translation — not part of the submitted set
 docs/report_zh.md
 docs/CP5403_报告_中文版.docx
+
+# Speech script — kept locally, not part of the submitted set
+docs/speech_script.md
+docs/speech_script_ipa.md
+docs/CP5403_Speech_Script.docx
+docs/CP5403_Speech_Script_IPA.docx
+
+# Scratch files from document builds and visual checks
+docs/_*
